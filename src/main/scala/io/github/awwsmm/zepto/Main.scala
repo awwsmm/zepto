@@ -1,4 +1,4 @@
-package zepto
+package io.github.awwsmm.zepto
 
 object Main extends App {
 

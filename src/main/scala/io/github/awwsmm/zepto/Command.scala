@@ -1,4 +1,4 @@
-package zepto
+package io.github.awwsmm.zepto
 
 case class Command (name: String, help: String, action: String => Unit)
 

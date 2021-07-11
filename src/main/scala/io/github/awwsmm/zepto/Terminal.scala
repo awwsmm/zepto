@@ -1,4 +1,4 @@
-package zepto
+package io.github.awwsmm.zepto
 
 case class Terminal(commands: Set[Command], prompt: String = "\nzepto> ") {
 
