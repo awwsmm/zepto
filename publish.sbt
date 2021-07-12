@@ -1,5 +1,5 @@
-ThisBuild / organization := "io.github.awwsmm.zepto"
-ThisBuild / organizationName := "example"
+ThisBuild / organization := "io.github.awwsmm"
+ThisBuild / organizationName := "awwsmm"
 ThisBuild / organizationHomepage := Some(url("https://awwsmm.com"))
 
 ThisBuild / scmInfo := Some(
@@ -32,3 +32,5 @@ ThisBuild / publishTo := {
 }
 
 ThisBuild / publishMavenStyle := true
+
+ThisBuild / versionScheme := Some("early-semver")
