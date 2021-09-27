@@ -7,7 +7,7 @@ A teeny, tiny, customisable, dependency-free shell for interactive Scala applica
 Add **zepto** to your `build.sbt` `libraryDependencies` with
 
 ```sbt
-"io.github.awwsmm" %% "zepto" % "0.4.0"
+"io.github.awwsmm" %% "zepto" % "1.0.0"
 ```
 
 Then, add a `Terminal` to your project like
@@ -19,7 +19,7 @@ object Main extends App {
   import Command._
 
   // example custom command
-  val hello = Command("hello", "says hello", _ => println("Hello, World!"))
+  val hello = Command("hello", "says hello", _ => Some("Hello, World!"))
 
   // example custom prompt
   val prompt = "\nmyshell$ "
@@ -28,7 +28,7 @@ object Main extends App {
   val commands = Set(Echo, Ohce, Quit, hello, help(Set(Echo, Ohce, Quit, hello)))
 
   // create the terminal with the custom commands and prompt
-  val terminal = Terminal(commands, prompt)
+  val terminal = new Terminal(commands, prompt)
 
   // run the terminal until the user `quit` s
   terminal.run()
@@ -73,7 +73,7 @@ zepto> help
 echo => echoes text
 help => prints this help text
 ohce => reverses and echoes text
-quit => quits zepto
+quit => quits the terminal
 
 zepto> 
 ```
