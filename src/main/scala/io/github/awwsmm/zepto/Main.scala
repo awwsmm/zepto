@@ -9,6 +9,6 @@ object Main extends App {
     Command.help(Set(Command.Echo, Command.Ohce, Command.Quit))
   )
 
-  Terminal(commands).run()
+  new Terminal(commands).run()
 
 }
